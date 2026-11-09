@@ -1,6 +1,6 @@
-# Supabase (Turtle Party project, sickprints organization)
+# Supabase (Turtle Party project, owned by the sickprints organization)
 
-Same rule as Building Integrity: **Tommy pastes SQL into the dashboard himself.** Claude never connects to the live project.
+**Tommy pastes SQL into the dashboard himself.** Claude never connects to the live project.
 
 ## Migrations
 
