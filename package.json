@@ -1,0 +1,12 @@
+{
+  "name": "turtle-party-digital",
+  "private": true,
+  "description": "Browser-based multiplayer Turtle Party. Monorepo: apps/web, apps/server, packages/rules, supabase/.",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "test": "npm run test --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present"
+  }
+}
