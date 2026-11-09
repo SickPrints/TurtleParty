@@ -6,10 +6,13 @@
 
 Run each file once, in order, in **SQL Editor > New query**: paste the whole file, then Run.
 
-| File | What it does | Check afterwards (one query) | Expect |
-| --- | --- | --- | --- |
-| `0001_profiles_and_bioregions.sql` | `bioregions` and `profiles` tables, row-level security, a profile row created at every sign-up | `select count(*) from pg_policies where schemaname = 'public';` | `3` |
-| `0002_seed_bioregions.sql` | The 185 One Earth bioregions | `select count(*) from public.bioregions;` | `185` |
+| File | What it does | Check afterwards (one query) | Expect | Applied |
+| --- | --- | --- | --- | --- |
+| `0001_profiles_and_bioregions.sql` | `bioregions` and `profiles` tables, row-level security, a profile row created at every sign-up | `select count(*) from pg_policies where schemaname = 'public';` | `3` | 2026-11-08 |
+| `0002_seed_bioregions.sql` | The 185 One Earth bioregions | `select count(*) from public.bioregions;` | `185` | 2026-11-08 |
+| `0003_grant_table_access.sql` | Table access for the website's roles. New Supabase projects don't grant it by default, so without it every read is "permission denied" | the query at the bottom of the file | `true` | 2026-11-08 |
+
+**Every new table needs its own `grant` lines**, as well as row-level security policies. New Supabase projects don't grant table access to the website automatically.
 
 `realm` and `subrealm` are empty for now. The One Earth web list gives only codes and names. Filling them in, and adding the map shapes, means importing One Earth's dataset, which is a separate download.
 
@@ -18,9 +21,10 @@ Run each file once, in order, in **SQL Editor > New query**: paste the whole fil
 1. **Authentication > URL Configuration**
    - Site URL: `http://localhost:3100` (change it to the real address at launch)
    - Redirect URLs: add `http://localhost:3100/**`
-2. **Authentication > Sign In / Providers > Email**: leave it on. Sign-in is a magic link, so there are no passwords.
-   - Supabase's built-in email sender only allows a few emails per hour. That's fine for testing, but set up a custom SMTP sender before real players arrive.
-3. **Project Settings > API keys**: copy the **Project URL** and the **publishable** key into `apps/web/.env.local` (copy `apps/web/.env.example`). Never use the secret / service_role key there.
+2. **Authentication > Sign In / Providers > Allow anonymous sign-ins**: turn it **on**. This is the main way in: "Start playing" gives each browser a guest identity with no email. Supabase limits new guests per hour from one internet address (about 30 by default), which is plenty for now. Before a public launch, add a bot check (Supabase supports Cloudflare Turnstile) so nobody can mass-create guests.
+3. **Authentication > Sign In / Providers > Email**: leave it on. Email is optional, for keeping the same player on another device, and uses a one-time link, so there are no passwords.
+   - Supabase's built-in email sender allows 2 emails per hour and only delivers to members of the project's organization. Set up a custom SMTP sender (for example Resend, with DNS records added in Squarespace for turtleparty.org) before other players need email.
+4. **Project Settings > API keys**: copy the **Project URL** and the **publishable** key into `apps/web/.env.local` (copy `apps/web/.env.example`). Never use the secret / service_role key there.
 
 ## Licence
 

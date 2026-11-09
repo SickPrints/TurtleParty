@@ -10,7 +10,11 @@ const ERRORS: Record<string, string> = {
 };
 
 export default async function LoginPage({ searchParams }: { searchParams: Promise<{ error?: string }> }) {
-  if (isBackendConfigured() && (await currentPlayer()).email) redirect("/welcome");
+  // Already signed in by email: nothing to do here. (A guest may still sign in to an email account.)
+  if (isBackendConfigured()) {
+    const player = await currentPlayer();
+    if (player.signedIn && !player.isGuest) redirect("/");
+  }
   const { error } = await searchParams;
   return (
     <main className="mx-auto w-full max-w-md px-4 py-12">

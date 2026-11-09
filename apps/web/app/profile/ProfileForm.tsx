@@ -51,7 +51,13 @@ export function ProfileForm({
       </div>
 
       <fieldset className="flex flex-col gap-2">
-        <legend className="text-sm font-medium">Home bioregion</legend>
+        <legend className="text-sm font-medium">
+          Home bioregion <span className="font-normal text-muted">(optional)</span>
+        </legend>
+        <p className="text-xs text-muted">
+          Not sure which is yours? Leave it for now. Search a nearby river, mountain range or landscape (for
+          Columbia, Missouri: Ozarks or prairie), and the map will help find it later.
+        </p>
         <input type="hidden" name="bioregion" value={selected} />
         <p className="text-sm">
           {chosen ? (
@@ -60,6 +66,11 @@ export function ProfileForm({
             </>
           ) : (
             <span className="text-muted">None chosen yet.</span>
+          )}
+          {chosen && (
+            <button type="button" onClick={() => setSelected("")} className="ml-2 text-xs underline">
+              clear
+            </button>
           )}
         </p>
         <input

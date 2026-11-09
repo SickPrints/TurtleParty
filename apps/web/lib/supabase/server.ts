@@ -1,6 +1,7 @@
 import { createServerClient } from "@supabase/ssr";
 import type { SupabaseClient } from "@supabase/supabase-js";
 import { cookies } from "next/headers";
+import { cache } from "react";
 import { SUPABASE_PUBLISHABLE_KEY, SUPABASE_URL } from "./env";
 
 /**
@@ -40,11 +41,20 @@ export interface Bioregion {
   biogeographic_realm: string;
 }
 
-/** The signed-in player and their profile, or nulls if signed out / not configured. */
-export async function currentPlayer(): Promise<{ email: string | null; profile: Profile | null; bioregion: Bioregion | null }> {
+export interface CurrentPlayer {
+  signedIn: boolean;
+  /** A guest: anonymous sign-in, no email attached. */
+  isGuest: boolean;
+  email: string | null;
+  profile: Profile | null;
+  bioregion: Bioregion | null;
+}
+
+/** The current player (guest or email) and their profile. Cached per request (top bar + page). */
+export const currentPlayer = cache(async (): Promise<CurrentPlayer> => {
   const supabase = await createSupabaseServerClient();
   const { data } = await supabase.auth.getUser();
-  if (!data.user) return { email: null, profile: null, bioregion: null };
+  if (!data.user) return { signedIn: false, isGuest: false, email: null, profile: null, bioregion: null };
   const { data: profile } = await supabase
     .from("profiles")
     .select("id, username, bioregion_code")
@@ -59,5 +69,11 @@ export async function currentPlayer(): Promise<{ email: string | null; profile: 
       .maybeSingle<Bioregion>();
     bioregion = b ?? null;
   }
-  return { email: data.user.email ?? null, profile: profile ?? null, bioregion };
-}
+  return {
+    signedIn: true,
+    isGuest: data.user.is_anonymous === true,
+    email: data.user.email ?? null,
+    profile: profile ?? null,
+    bioregion,
+  };
+});

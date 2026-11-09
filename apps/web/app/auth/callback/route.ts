@@ -11,5 +11,5 @@ export async function GET(request: NextRequest) {
   const { error } = await supabase.auth.exchangeCodeForSession(code);
   // The usual failure: the link was opened in a different browser from the one that asked for it.
   if (error) return NextResponse.redirect(`${origin}/login?error=link`);
-  return NextResponse.redirect(`${origin}/welcome`);
+  return NextResponse.redirect(`${origin}/`);
 }

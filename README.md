@@ -7,9 +7,9 @@ Free, browser-based, real-time multiplayer Turtle Party. See `CLAUDE.md` for the
 | Folder | What | Status |
 | --- | --- | --- |
 | `packages/rules` | The rules engine, shared by server and browser | Phase 0, built |
-| `apps/web` | Next.js app (Vercel): magic-link sign-in, username and home bioregion | Phase 0, built |
+| `apps/web` | Next.js app (Vercel): guest play with no sign-in (optional email link), username and home bioregion | Phase 0, built |
 | `apps/server` | Socket.io game server (Railway or Fly.io) | not started |
-| `supabase/` | Migrations; see `supabase/README.md` for the paste-in steps | Phase 0, written, not yet applied |
+| `supabase/` | Migrations; see `supabase/README.md` for the paste-in steps | Phase 0, 0001–0003 applied 2026-11-08 |
 
 ## Commands
 
