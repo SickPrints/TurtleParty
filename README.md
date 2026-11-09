@@ -7,9 +7,9 @@ Free, browser-based, real-time multiplayer Turtle Party. See `CLAUDE.md` for the
 | Folder | What | Status |
 | --- | --- | --- |
 | `packages/rules` | The rules engine, shared by server and browser | Phase 0, built |
-| `apps/web` | Next.js app (Vercel) | not started |
+| `apps/web` | Next.js app (Vercel): magic-link sign-in, username and home bioregion | Phase 0, built |
 | `apps/server` | Socket.io game server (Railway or Fly.io) | not started |
-| `supabase/` | Migrations | not started |
+| `supabase/` | Migrations; see `supabase/README.md` for the paste-in steps | Phase 0, written, not yet applied |
 
 ## Commands
 
@@ -19,7 +19,12 @@ Run from the repo root (works the same on Windows):
 npm install
 npm test
 npm run typecheck
+npm run dev        # web app at http://localhost:3100
+npm run build
+npm run lint
 ```
+
+The web app needs `apps/web/.env.local`; copy `apps/web/.env.example`. Without it the site still loads and says sign-in isn't connected.
 
 ## The rules engine
 

@@ -3,10 +3,14 @@
   "private": true,
   "description": "Browser-based multiplayer Turtle Party. Monorepo: apps/web, apps/server, packages/rules, supabase/.",
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "apps/*"
   ],
   "scripts": {
     "test": "npm run test --workspaces --if-present",
-    "typecheck": "npm run typecheck --workspaces --if-present"
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "dev": "npm run dev -w @turtle-party/web",
+    "build": "npm run build -w @turtle-party/web",
+    "lint": "npm run lint -w @turtle-party/web"
   }
 }

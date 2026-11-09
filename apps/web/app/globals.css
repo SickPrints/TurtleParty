@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+/* Turtle Party palette. Every colour is a token, redefined for dark mode. */
+:root {
+  --background: #f6f4ee;
+  --foreground: #1c2420;
+  --surface: #ffffff;
+  --line: #d6d2c4;
+  --muted: #5e6a63;
+  --shell: #2f6b4f; /* turtle-shell green */
+  --on-shell: #ffffff;
+  --pond: #2b7a8c; /* Pitch Pond blue */
+  --warn: #b7791f;
+  --danger: #b42318;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #131816;
+    --foreground: #e8ece9;
+    --surface: #1c2320;
+    --line: #34403a;
+    --muted: #9aa8a0;
+    --shell: #4f9d76;
+    --on-shell: #0d1411;
+    --pond: #5ab3c6;
+    --warn: #e0a54a;
+    --danger: #f97066;
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-line: var(--line);
+  --color-muted: var(--muted);
+  --color-shell: var(--shell);
+  --color-on-shell: var(--on-shell);
+  --color-pond: var(--pond);
+  --color-warn: var(--warn);
+  --color-danger: var(--danger);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
