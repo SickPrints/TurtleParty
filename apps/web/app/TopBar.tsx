@@ -15,6 +15,9 @@ export async function TopBar() {
         <Link href="/" className="font-semibold tracking-tight">
           Turtle Party
         </Link>
+        <Link href="/lore" className="text-sm text-muted underline-offset-2 hover:underline">
+          Lore
+        </Link>
         {configured && (
           <div className="ml-auto flex flex-wrap items-center gap-x-4 gap-y-2">
             <NameField key={player?.profile?.username ?? ""} initial={player?.profile?.username ?? ""} signedIn={signedIn} />
