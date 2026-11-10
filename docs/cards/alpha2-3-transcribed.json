@@ -1,0 +1,442 @@
+[
+ {
+  "set": "Alpha 2",
+  "name": "Volcano",
+  "colour": "red",
+  "value": 3,
+  "timings": [
+   "Pairing Effect"
+  ],
+  "copies": 9,
+  "effect_text": "Roll a D6. Add that many counters to your pairs in any way. Then distribute that many to opponents' pairs."
+ },
+ {
+  "set": "Alpha 2",
+  "name": "Blacksmith",
+  "colour": "red",
+  "value": 2,
+  "timings": [
+   "Pitch Effect"
+  ],
+  "copies": 10,
+  "effect_text": "Target another player and roll a D6: 1 or 2 = you draw +1. 3 or 4 = they discard 1. 5 or higher = both effects. Play +1."
+ },
+ {
+  "set": "Alpha 2",
+  "name": "Fireback",
+  "colour": "red",
+  "value": 1,
+  "timings": [
+   "Discard Anytime"
+  ],
+  "copies": 5,
+  "effect_text": "Negate an effect until the end of the turn."
+ },
+ {
+  "set": "Alpha 2",
+  "name": "Space Station",
+  "colour": "orange",
+  "value": 3,
+  "timings": [
+   "Pairing Effect"
+  ],
+  "copies": 9,
+  "effect_text": "Decrease target pair's value by 3."
+ },
+ {
+  "set": "Alpha 2",
+  "name": "Two Dice",
+  "colour": "orange",
+  "value": 2,
+  "timings": [
+   "Pitch Effect"
+  ],
+  "copies": 9,
+  "effect_text": "Target a pair and roll two D6's: decrease it's value by the difference of the rolls. Play +1."
+ },
+ {
+  "set": "Alpha 2",
+  "name": "Icky Wings",
+  "colour": "orange",
+  "value": 2,
+  "timings": [
+   "Pitch Effect"
+  ],
+  "copies": 1,
+  "effect_text": "Decrease target pair's value by 4."
+ },
+ {
+  "set": "Alpha 2",
+  "name": "Flicker",
+  "colour": "orange",
+  "value": 1,
+  "timings": [
+   "Discard Anytime"
+  ],
+  "copies": 5,
+  "effect_text": "Negate an effect until the end of the turn. This does not effect additional plays."
+ },
+ {
+  "set": "Alpha 2",
+  "name": "Reinforcements",
+  "colour": "green",
+  "value": 3,
+  "timings": [
+   "Pairing Effect"
+  ],
+  "copies": 9,
+  "effect_text": "Add +3 to the value of target pair."
+ },
+ {
+  "set": "Alpha 2",
+  "name": "Multicorn",
+  "colour": "green",
+  "value": 2,
+  "timings": [
+   "Pitch Effect"
+  ],
+  "copies": 10,
+  "effect_text": "Play +2."
+ },
+ {
+  "set": "Alpha 2",
+  "name": "Rumpy Stumpy",
+  "colour": "green",
+  "value": 1,
+  "timings": [
+   "Discard Anytime"
+  ],
+  "copies": 5,
+  "effect_text": "Target effect does not effect you, your cards, or your pairs this turn."
+ },
+ {
+  "set": "Alpha 2",
+  "name": "Wiz Book",
+  "colour": "blue",
+  "value": 3,
+  "timings": [
+   "Pairing Effect"
+  ],
+  "copies": 9,
+  "effect_text": "Handsize +2 until end of turn."
+ },
+ {
+  "set": "Alpha 2",
+  "name": "Shenanigans",
+  "colour": "blue",
+  "value": 2,
+  "timings": [
+   "Pitch Effect"
+  ],
+  "copies": 10,
+  "effect_text": "Activate target effect from a card in the pitch pond (until the end of the turn)."
+ },
+ {
+  "set": "Alpha 2",
+  "name": "Magic Trick",
+  "colour": "blue",
+  "value": 1,
+  "timings": [
+   "Discard Anytime"
+  ],
+  "copies": 5,
+  "effect_text": "Target effect does not effect your pairs this turn. Draw +1."
+ },
+ {
+  "set": "Alpha 2",
+  "name": "Hand of Necromancy",
+  "colour": "yellow",
+  "value": 1,
+  "timings": [
+   "Ongoing Effect"
+  ],
+  "copies": 3,
+  "effect_text": "At anytime, you may discard 2 cards to negate an effect until the end of the turn."
+ },
+ {
+  "set": "Alpha 2",
+  "name": "Sword Birdie",
+  "colour": "yellow",
+  "value": 1,
+  "timings": [
+   "Ongoing Effect"
+  ],
+  "copies": 3,
+  "effect_text": "On each of your turns, you may decrease target pair's value by 2."
+ },
+ {
+  "set": "Alpha 2",
+  "name": "Trophy Crypt",
+  "colour": "yellow",
+  "value": 1,
+  "timings": [
+   "Ongoing Effect"
+  ],
+  "copies": 3,
+  "effect_text": "Add X to this cards value where X is the number of yellow cards in your party."
+ },
+ {
+  "set": "Alpha 2",
+  "name": "Egg Nest",
+  "colour": "yellow",
+  "value": 1,
+  "timings": [
+   "Ongoing Effect"
+  ],
+  "copies": 3,
+  "effect_text": "Once per turn, if a pair in your party is targeted by another player, draw 2 cards."
+ },
+ {
+  "set": "Alpha 2",
+  "name": "Wild Turtle",
+  "colour": "purple",
+  "value": 3,
+  "timings": [
+   "Ongoing Effect"
+  ],
+  "copies": 4,
+  "effect_text": "Wild cards are every color."
+ },
+ {
+  "set": "Alpha 2",
+  "name": "Wild Tortoise",
+  "colour": "purple",
+  "value": 2,
+  "timings": [
+   "Ongoing Effect"
+  ],
+  "copies": 4,
+  "effect_text": "Wild cards are every color."
+ },
+ {
+  "set": "Alpha 2",
+  "name": "Wild Leatherback",
+  "colour": "purple",
+  "value": 1,
+  "timings": [
+   "Ongoing Effect"
+  ],
+  "copies": 4,
+  "effect_text": "Wild cards are every color."
+ },
+ {
+  "set": "Alpha 3",
+  "name": "Farty Turtle",
+  "colour": "red",
+  "value": 3,
+  "timings": [
+   "Pairing Effect"
+  ],
+  "copies": 9,
+  "effect_text": "The value of each pair in target player's party is decreased by 1."
+ },
+ {
+  "set": "Alpha 3",
+  "name": "Sawblade",
+  "colour": "red",
+  "value": 2,
+  "timings": [
+   "Pitch Effect"
+  ],
+  "copies": 10,
+  "effect_text": "Each other player discards 1 card into the pitch pond. Play +1."
+ },
+ {
+  "set": "Alpha 3",
+  "name": "Firebolt",
+  "colour": "red",
+  "value": 1,
+  "timings": [
+   "Discard Anytime"
+  ],
+  "copies": 5,
+  "effect_text": "Negate an effect until the end of the turn."
+ },
+ {
+  "set": "Alpha 3",
+  "name": "Space Station",
+  "colour": "orange",
+  "value": 3,
+  "timings": [
+   "Pairing Effect"
+  ],
+  "copies": 9,
+  "effect_text": "Decrease target pair's value by 3."
+ },
+ {
+  "set": "Alpha 3",
+  "name": "Icky Wings",
+  "colour": "orange",
+  "value": 2,
+  "timings": [
+   "Pitch Effect"
+  ],
+  "copies": 9,
+  "effect_text": "Decrease target pair's value by 4."
+ },
+ {
+  "set": "Alpha 3",
+  "name": "Two Dice",
+  "colour": "orange",
+  "value": 2,
+  "timings": [
+   "Pitch Effect"
+  ],
+  "copies": 1,
+  "effect_text": "Target a pair and roll two D6's: decrease it's value by the difference of the rolls. Play +1."
+ },
+ {
+  "set": "Alpha 3",
+  "name": "Ancient Turtle",
+  "colour": "orange",
+  "value": 1,
+  "timings": [
+   "Discard Anytime"
+  ],
+  "copies": 5,
+  "effect_text": "Negate an effect until the end of the turn. This does not effect additional plays."
+ },
+ {
+  "set": "Alpha 3",
+  "name": "Castle Turtle",
+  "colour": "green",
+  "value": 3,
+  "timings": [
+   "Pairing Effect"
+  ],
+  "copies": 9,
+  "effect_text": "Add +1 to each pair in your party."
+ },
+ {
+  "set": "Alpha 3",
+  "name": "Toolbox",
+  "colour": "green",
+  "value": 2,
+  "timings": [
+   "Pitch Effect"
+  ],
+  "copies": 10,
+  "effect_text": "Draw +1. Play +1. Add +1 to a pair."
+ },
+ {
+  "set": "Alpha 3",
+  "name": "Play Maker",
+  "colour": "green",
+  "value": 1,
+  "timings": [
+   "Discard Anytime"
+  ],
+  "copies": 5,
+  "effect_text": "Target effect does not effect you, your cards, or your pairs this turn."
+ },
+ {
+  "set": "Alpha 3",
+  "name": "Bubbler",
+  "colour": "blue",
+  "value": 3,
+  "timings": [
+   "Pairing Effect"
+  ],
+  "copies": 9,
+  "effect_text": "Take a card from the pitch pond after drawing up to handsize this turn."
+ },
+ {
+  "set": "Alpha 3",
+  "name": "Jetpack Boost",
+  "colour": "blue",
+  "value": 2,
+  "timings": [
+   "Pitch Effect"
+  ],
+  "copies": 10,
+  "effect_text": "Handsize +1 until end of the turn. Play +1."
+ },
+ {
+  "set": "Alpha 3",
+  "name": "Flipsy",
+  "colour": "blue",
+  "value": 1,
+  "timings": [
+   "Discard Anytime"
+  ],
+  "copies": 5,
+  "effect_text": "Choose new targets for target effect."
+ },
+ {
+  "set": "Alpha 3",
+  "name": "Cultist",
+  "colour": "yellow",
+  "value": 1,
+  "timings": [
+   "Ongoing Effect"
+  ],
+  "copies": 3,
+  "effect_text": "Each other players' handsize is reduced by 1."
+ },
+ {
+  "set": "Alpha 3",
+  "name": "Darthy Turtle",
+  "colour": "yellow",
+  "value": 1,
+  "timings": [
+   "Ongoing Effect"
+  ],
+  "copies": 3,
+  "effect_text": "Once per turn, move a +1 counter from target pair to another target pair."
+ },
+ {
+  "set": "Alpha 3",
+  "name": "Turtle Party",
+  "colour": "yellow",
+  "value": 1,
+  "timings": [
+   "Ongoing Effect"
+  ],
+  "copies": 3,
+  "effect_text": "Handsize +1."
+ },
+ {
+  "set": "Alpha 3",
+  "name": "Party Turtle",
+  "colour": "yellow",
+  "value": 1,
+  "timings": [
+   "Ongoing Effect"
+  ],
+  "copies": 3,
+  "effect_text": "Once each of your turns, add +1 to each other pair in your party"
+ },
+ {
+  "set": "Alpha 3",
+  "name": "Wild Turtle",
+  "colour": "purple",
+  "value": 3,
+  "timings": [
+   "Ongoing Effect"
+  ],
+  "copies": 4,
+  "effect_text": "Wild cards are every color."
+ },
+ {
+  "set": "Alpha 3",
+  "name": "Wild Tortoise",
+  "colour": "purple",
+  "value": 2,
+  "timings": [
+   "Ongoing Effect"
+  ],
+  "copies": 4,
+  "effect_text": "Wild cards are every color."
+ },
+ {
+  "set": "Alpha 3",
+  "name": "Wild Leatherback",
+  "colour": "purple",
+  "value": 1,
+  "timings": [
+   "Ongoing Effect"
+  ],
+  "copies": 4,
+  "effect_text": "Wild cards are every color."
+ }
+]

@@ -1,0 +1,562 @@
+[
+  {
+    "file": "red1firebolt.PNG",
+    "name": "Firebolt",
+    "colour": "red",
+    "value": 1,
+    "effects": [
+      {
+        "timing": "Discard Anytime",
+        "text": "NEGATE AN EFFECT UNTIL THE END OF THE TURN."
+      }
+    ],
+    "copies": null,
+    "set_code": "Alpha4",
+    "other_printed": "date code 20250111TJF (bottom-left); artist signature bottom-right (stylised scribble, not legible as a name); no colour word printed above the name banner",
+    "unclear": ""
+  },
+  {
+    "file": "red1fireback.PNG",
+    "name": "Fireback",
+    "colour": "red",
+    "value": 1,
+    "effects": [
+      {
+        "timing": "Discard Anytime",
+        "text": "NEGATE AN EFFECT UNTIL THE END OF THE TURN."
+      }
+    ],
+    "copies": null,
+    "set_code": "Alpha4",
+    "other_printed": "date code 20250111TJF (bottom-left); artist signature bottom-right (stylised scribble, not legible as a name); colour word 'RED' printed above the name banner",
+    "unclear": ""
+  },
+  {
+    "file": "red2sawblade.PNG",
+    "name": "Sawblade",
+    "colour": "red",
+    "value": 2,
+    "effects": [
+      {
+        "timing": "Pitch Effect",
+        "text": "EACH OTHER PLAYER DISCARDS 1 CARD INTO THE PITCH POND. PLAY +1."
+      }
+    ],
+    "copies": null,
+    "set_code": "Alpha4",
+    "other_printed": "date code 20250111TJF (bottom-left); artist signature bottom-right (stylised scribble, not legible as a name); no colour word printed above the name banner",
+    "unclear": ""
+  },
+  {
+    "file": "red2blacksmith_.PNG",
+    "name": "Blacksmith",
+    "colour": "red",
+    "value": 2,
+    "effects": [
+      {
+        "timing": "Pitch Effect",
+        "text": "TARGET ANOTHER PLAYER AND ROLL A D6: 1 OR 2 = YOU DRAW +1. 3 OR 4 = THEY DISCARD 1. 5 OR HIGHER = BOTH EFFECTS. PLAY +1."
+      }
+    ],
+    "copies": null,
+    "set_code": "Alpha4",
+    "other_printed": "date code 20250111TJF (bottom-left); artist signature bottom-right (stylised scribble, not legible as a name); colour word 'RED' printed above the name banner",
+    "unclear": "The font draws the digit 1 like a capital I; read as 1 throughout."
+  },
+  {
+    "file": "red3volcano.PNG",
+    "name": "Volcano",
+    "colour": "red",
+    "value": 3,
+    "effects": [
+      {
+        "timing": "Pairing Effect",
+        "text": "ROLL A D6. ADD THAT MANY COUNTERS TO YOUR PAIRS IN ANY WAY. THEN DISTRIBUTE THAT MANY TO OPPONENTS' PAIRS."
+      }
+    ],
+    "copies": null,
+    "set_code": "Alpha4",
+    "other_printed": "date code 20250111TJF (bottom-left); artist signature bottom-right (stylised scribble, not legible as a name); colour word 'RED' printed above the name banner",
+    "unclear": ""
+  },
+  {
+    "file": "red3farty.PNG",
+    "name": "Farty Turtle",
+    "colour": "red",
+    "value": 3,
+    "effects": [
+      {
+        "timing": "Pairing Effect",
+        "text": "THE VALUE OF EACH PAIR IN TARGET PLAYER'S PARTY IS DECREASED BY 1."
+      }
+    ],
+    "copies": null,
+    "set_code": "Alpha4",
+    "other_printed": "date code 20250111TJF (bottom-left); artist signature bottom-right (stylised scribble, not legible as a name); no colour word printed above the name banner",
+    "unclear": ""
+  },
+  {
+    "file": "orange1ancient.PNG",
+    "name": "Ancient Turtle",
+    "colour": "orange",
+    "value": 1,
+    "effects": [
+      {
+        "timing": "Discard Anytime",
+        "text": "NEGATE AN EFFECT UNTIL THE END OF THE TURN. THIS DOES NOT EFFECT ADDITIONAL PLAYS."
+      }
+    ],
+    "copies": null,
+    "set_code": "Alpha4",
+    "other_printed": "date code 20250111TJF (bottom-left); artist signature bottom-right (stylised scribble, not legible as a name); no colour word printed above the name banner",
+    "unclear": ""
+  },
+  {
+    "file": "orange1flicker.PNG",
+    "name": "Flicker",
+    "colour": "orange",
+    "value": 1,
+    "effects": [
+      {
+        "timing": "Discard Anytime",
+        "text": "NEGATE AN EFFECT UNTIL THE END OF THE TURN. THIS DOES NOT EFFECT ADDITIONAL PLAYS."
+      }
+    ],
+    "copies": null,
+    "set_code": "Alpha4",
+    "other_printed": "date code 20250111TJF (bottom-left); artist signature bottom-right (stylised scribble, not legible as a name); colour word 'ORANGE' printed above the name banner",
+    "unclear": ""
+  },
+  {
+    "file": "orange2icky.PNG",
+    "name": "Icky Wings",
+    "colour": "orange",
+    "value": 2,
+    "effects": [
+      {
+        "timing": "Pitch Effect",
+        "text": "DECREASE TARGET PAIR'S VALUE BY 4. PLAY +1. HANDSIZE -1 THIS TURN."
+      }
+    ],
+    "copies": null,
+    "set_code": "Alpha4",
+    "other_printed": "date code 20250111TJF (bottom-left); artist signature bottom-right (stylised scribble, not legible as a name); no colour word printed above the name banner",
+    "unclear": ""
+  },
+  {
+    "file": "orange2twodice.PNG",
+    "name": "Two Dice",
+    "colour": "orange",
+    "value": 2,
+    "effects": [
+      {
+        "timing": "Pitch Effect",
+        "text": "TARGET A PAIR AND ROLL TWO D6'S: DECREASE IT'S VALUE BY THE DIFFERENCE OF THE ROLLS. PLAY +1."
+      }
+    ],
+    "copies": null,
+    "set_code": "Alpha4",
+    "other_printed": "date code 20250111TJF (bottom-left); artist signature bottom-right (stylised scribble, not legible as a name); colour word 'ORANGE' printed above the name banner",
+    "unclear": ""
+  },
+  {
+    "file": "orange3darn.PNG",
+    "name": "Darnation",
+    "colour": "orange",
+    "value": 3,
+    "effects": [
+      {
+        "timing": "Pairing Effect",
+        "text": "TARGET A PAIR AND ROLL A D6: DECREASE ITS VALUE BY THE VALUE ROLLED."
+      }
+    ],
+    "copies": null,
+    "set_code": "Alpha4",
+    "other_printed": "date code 20250111TJF (bottom-left); artist signature bottom-right (stylised scribble, not legible as a name); colour word 'ORANGE' printed above the name banner",
+    "unclear": ""
+  },
+  {
+    "file": "orange3space.PNG",
+    "name": "Space Station",
+    "colour": "orange",
+    "value": 3,
+    "effects": [
+      {
+        "timing": "Pairing Effect",
+        "text": "DECREASE TARGET PAIR'S VALUE BY 3."
+      }
+    ],
+    "copies": null,
+    "set_code": "Alpha4",
+    "other_printed": "date code 20250111TJF (bottom-left); artist signature bottom-right (stylised scribble, not legible as a name); no colour word printed above the name banner",
+    "unclear": ""
+  },
+  {
+    "file": "green1play.PNG",
+    "name": "Play Maker",
+    "colour": "green",
+    "value": 1,
+    "effects": [
+      {
+        "timing": "Discard Anytime",
+        "text": "TARGET EFFECT DOES NOT EFFECT YOU, YOUR CARDS, OR YOUR PAIRS THIS TURN."
+      }
+    ],
+    "copies": null,
+    "set_code": "Alpha4",
+    "other_printed": "date code 20250111TJF (bottom-left); artist signature bottom-right (stylised scribble, not legible as a name); no colour word printed above the name banner",
+    "unclear": ""
+  },
+  {
+    "file": "green1rumpy.PNG",
+    "name": "Rumpy Stumpy",
+    "colour": "green",
+    "value": 1,
+    "effects": [
+      {
+        "timing": "Discard Anytime",
+        "text": "TARGET EFFECT DOES NOT EFFECT YOU, YOUR CARDS, OR YOUR PAIRS THIS TURN."
+      }
+    ],
+    "copies": null,
+    "set_code": "Alpha4",
+    "other_printed": "date code 20250111TJF (bottom-left); artist signature bottom-right (stylised scribble, not legible as a name); colour word 'GREEN' printed above the name banner",
+    "unclear": ""
+  },
+  {
+    "file": "green2tool.PNG",
+    "name": "Toolbox",
+    "colour": "green",
+    "value": 2,
+    "effects": [
+      {
+        "timing": "Pitch Effect",
+        "text": "DRAW +1. PLAY +1. ADD +1 TO A PAIR."
+      }
+    ],
+    "copies": null,
+    "set_code": "Alpha4",
+    "other_printed": "date code 20250111TJF (bottom-left); artist signature bottom-right (stylised scribble, not legible as a name); no colour word printed above the name banner",
+    "unclear": ""
+  },
+  {
+    "file": "green2multi.PNG",
+    "name": "Multicorn",
+    "colour": "green",
+    "value": 2,
+    "effects": [
+      {
+        "timing": "Pitch Effect",
+        "text": "PLAY +2"
+      }
+    ],
+    "copies": null,
+    "set_code": "Alpha4",
+    "other_printed": "date code 20250111TJF (bottom-left); artist signature bottom-right (stylised scribble, not legible as a name); colour word 'GREEN' printed above the name banner",
+    "unclear": ""
+  },
+  {
+    "file": "green3rein.PNG",
+    "name": "Reinforcements",
+    "colour": "green",
+    "value": 3,
+    "effects": [
+      {
+        "timing": "Pairing Effect",
+        "text": "ADD +3 TO THE VALUE OF TARGET PAIR."
+      }
+    ],
+    "copies": null,
+    "set_code": "Alpha4",
+    "other_printed": "date code 20250111TJF (bottom-left); artist signature bottom-right (stylised scribble, not legible as a name); colour word 'GREEN' printed above the name banner",
+    "unclear": ""
+  },
+  {
+    "file": "green3castle.PNG",
+    "name": "Castle Turtle",
+    "colour": "green",
+    "value": 3,
+    "effects": [
+      {
+        "timing": "Pairing Effect",
+        "text": "ADD +1 TO EACH PAIR IN YOUR PARTY."
+      }
+    ],
+    "copies": null,
+    "set_code": "Alpha4",
+    "other_printed": "date code 20250111TJF (bottom-left); artist signature bottom-right (stylised scribble, not legible as a name); no colour word printed above the name banner",
+    "unclear": ""
+  },
+  {
+    "file": "blue1magic.PNG",
+    "name": "Magic Trick",
+    "colour": "blue",
+    "value": 1,
+    "effects": [
+      {
+        "timing": "Discard Anytime",
+        "text": "TARGET EFFECT DOES NOT EFFECT YOUR PAIRS THIS TURN. DRAW +1."
+      }
+    ],
+    "copies": null,
+    "set_code": "Alpha4",
+    "other_printed": "date code 20250111TJF (bottom-left); artist signature bottom-right (stylised scribble, not legible as a name); colour word 'BLUE' printed above the name banner",
+    "unclear": ""
+  },
+  {
+    "file": "blue1flipsy.PNG",
+    "name": "Flipsy",
+    "colour": "blue",
+    "value": 1,
+    "effects": [
+      {
+        "timing": "Discard Anytime",
+        "text": "CHOOSE NEW TARGETS FOR TARGET EFFECT."
+      }
+    ],
+    "copies": null,
+    "set_code": "Alpha4",
+    "other_printed": "date code 20250111TJF (bottom-left); artist signature bottom-right (stylised scribble, not legible as a name); no colour word printed above the name banner",
+    "unclear": ""
+  },
+  {
+    "file": "blue2jetpack.PNG",
+    "name": "Jetpack Boost",
+    "colour": "blue",
+    "value": 2,
+    "effects": [
+      {
+        "timing": "Pitch Effect",
+        "text": "HANDSIZE +1 UNTIL END OF THE TURN. PLAY +1."
+      }
+    ],
+    "copies": null,
+    "set_code": "Alpha4",
+    "other_printed": "date code 20250111TJF (bottom-left); artist signature bottom-right (stylised scribble, not legible as a name); no colour word printed above the name banner",
+    "unclear": ""
+  },
+  {
+    "file": "blue2shenan.PNG",
+    "name": "Shenanigans",
+    "colour": "blue",
+    "value": 2,
+    "effects": [
+      {
+        "timing": "Pitch Effect",
+        "text": "ACTIVATE TARGET EFFECT FROM A CARD IN THE PITCH POND (UNTIL THE END OF THE TURN)."
+      }
+    ],
+    "copies": null,
+    "set_code": "Alpha4",
+    "other_printed": "date code 20250111TJF (bottom-left); artist signature bottom-right (stylised scribble, not legible as a name); colour word 'BLUE' printed above the name banner",
+    "unclear": ""
+  },
+  {
+    "file": "blue3wiz.PNG",
+    "name": "Wiz Book",
+    "colour": "blue",
+    "value": 3,
+    "effects": [
+      {
+        "timing": "Pairing Effect",
+        "text": "HANDSIZE +2 UNTIL END OF TURN."
+      }
+    ],
+    "copies": null,
+    "set_code": "Alpha4",
+    "other_printed": "date code 20250111TJF (bottom-left); artist signature bottom-right (stylised scribble, not legible as a name); colour word 'BLUE' printed above the name banner",
+    "unclear": ""
+  },
+  {
+    "file": "Blue3bubbler.PNG",
+    "name": "Bubbler",
+    "colour": "blue",
+    "value": 3,
+    "effects": [
+      {
+        "timing": "Pairing Effect",
+        "text": "TAKE A CARD FROM THE PITCH POND AFTER DRAWING UP TO HANDSIZE THIS TURN."
+      }
+    ],
+    "copies": null,
+    "set_code": "Alpha4",
+    "other_printed": "date code 20250111TJF (bottom-left); artist signature bottom-right (stylised scribble, not legible as a name); no colour word printed above the name banner",
+    "unclear": ""
+  },
+  {
+    "file": "yellow1darthy.PNG",
+    "name": "Darthy Turtle",
+    "colour": "yellow",
+    "value": 1,
+    "effects": [
+      {
+        "timing": "Ongoing Effect",
+        "text": "ONCE PER TURN, MOVE A +1 COUNTER FROM TARGET PAIR TO ANOTHER TARGET PAIR."
+      }
+    ],
+    "copies": null,
+    "set_code": "Alpha4",
+    "other_printed": "date code 20250111TJF (bottom-left); artist signature bottom-right (stylised scribble, not legible as a name); colour word 'YELLOW' printed above the name banner",
+    "unclear": ""
+  },
+  {
+    "file": "yellow1partyturtle.PNG",
+    "name": "Party Turtle",
+    "colour": "yellow",
+    "value": 1,
+    "effects": [
+      {
+        "timing": "Ongoing Effect",
+        "text": "ONCE EACH OF YOUR TURNS, ADD +1 TO EACH OTHER PAIR IN YOUR PARTY"
+      }
+    ],
+    "copies": null,
+    "set_code": "Alpha4",
+    "other_printed": "date code 20250111TJF (bottom-left); artist signature bottom-right (stylised scribble, not legible as a name); colour word 'YELLOW' printed above the name banner",
+    "unclear": "No full stop printed at the end of the effect text."
+  },
+  {
+    "file": "yellow1trophy.PNG",
+    "name": "Trophy Crypt",
+    "colour": "yellow",
+    "value": 1,
+    "effects": [
+      {
+        "timing": "Ongoing Effect",
+        "text": "ADD X TO THIS CARDS VALUE WHERE X IS THE NUMBER OF YELLOW CARDS IN YOUR PARTY."
+      }
+    ],
+    "copies": null,
+    "set_code": "Alpha4",
+    "other_printed": "date code 20250111TJF (bottom-left); artist signature bottom-right (stylised scribble, not legible as a name); colour word 'YELLOW' printed above the name banner",
+    "unclear": ""
+  },
+  {
+    "file": "yellow1necro.PNG",
+    "name": "Hand of Necromancy",
+    "colour": "yellow",
+    "value": 1,
+    "effects": [
+      {
+        "timing": "Ongoing Effect",
+        "text": "AT ANYTIME, YOU MAY DISCARD 2 CARDS TO NEGATE AN EFFECT UNTIL THE END OF THE TURN."
+      }
+    ],
+    "copies": null,
+    "set_code": "Alpha4",
+    "other_printed": "date code 20250111TJF (bottom-left); artist signature bottom-right (stylised scribble, not legible as a name); colour word 'YELLOW' printed above the name banner",
+    "unclear": ""
+  },
+  {
+    "file": "yellow1cultist.PNG",
+    "name": "Cultist",
+    "colour": "yellow",
+    "value": 1,
+    "effects": [
+      {
+        "timing": "Ongoing Effect",
+        "text": "EACH OTHER PLAYERS' HANDSIZE IS REDUCED BY 1."
+      }
+    ],
+    "copies": null,
+    "set_code": "Alpha4",
+    "other_printed": "date code 20250111TJF (bottom-left); artist signature bottom-right (stylised scribble, not legible as a name); colour word 'YELLOW' printed above the name banner",
+    "unclear": ""
+  },
+  {
+    "file": "yellow1swordie.PNG",
+    "name": "Sword Birdie",
+    "colour": "yellow",
+    "value": 1,
+    "effects": [
+      {
+        "timing": "Ongoing Effect",
+        "text": "ON EACH OF YOUR TURNS, YOU MAY DECREASE TARGET PAIR'S VALUE BY 2."
+      }
+    ],
+    "copies": null,
+    "set_code": "Alpha4",
+    "other_printed": "date code 20250111TJF (bottom-left); artist signature bottom-right (stylised scribble, not legible as a name); colour word 'YELLOW' printed above the name banner",
+    "unclear": ""
+  },
+  {
+    "file": "yellow1eggnest.PNG",
+    "name": "Egg Nest",
+    "colour": "yellow",
+    "value": 1,
+    "effects": [
+      {
+        "timing": "Ongoing Effect",
+        "text": "ONCE PER TURN, IF A PAIR IN YOUR PARTY IS TARGETED BY ANOTHER PLAYER, DRAW 2 CARDS."
+      }
+    ],
+    "copies": null,
+    "set_code": "Alpha4",
+    "other_printed": "date code 20250111TJF (bottom-left); artist signature bottom-right (stylised scribble, not legible as a name); colour word 'YELLOW' printed above the name banner",
+    "unclear": ""
+  },
+  {
+    "file": "yellow1turtleparty.PNG",
+    "name": "Turtle Party",
+    "colour": "yellow",
+    "value": 1,
+    "effects": [
+      {
+        "timing": "Ongoing Effect",
+        "text": "HANDSIZE +1."
+      }
+    ],
+    "copies": null,
+    "set_code": "Alpha4",
+    "other_printed": "date code 20250111TJF (bottom-left); artist signature bottom-right (stylised scribble, not legible as a name); colour word 'YELLOW' printed above the name banner",
+    "unclear": ""
+  },
+  {
+    "file": "WildTurtle.PNG",
+    "name": "Wild Turtle",
+    "colour": "purple",
+    "value": 3,
+    "effects": [
+      {
+        "timing": "Ongoing Effect",
+        "text": "WILD CARDS ARE EVERY COLOR."
+      }
+    ],
+    "copies": null,
+    "set_code": "Alpha4",
+    "other_printed": "date code 20250111TJF (bottom-left); artist signature bottom-right (stylised scribble, not legible as a name); colour word 'PURPLE' printed above the name banner",
+    "unclear": ""
+  },
+  {
+    "file": "WildLeath.PNG",
+    "name": "Wild Leatherback",
+    "colour": "purple",
+    "value": 1,
+    "effects": [
+      {
+        "timing": "Ongoing Effect",
+        "text": "WILD CARDS ARE EVERY COLOR."
+      }
+    ],
+    "copies": null,
+    "set_code": "Alpha4",
+    "other_printed": "date code 20250111TJF (bottom-left); artist signature bottom-right (stylised scribble, not legible as a name); colour word 'PURPLE' printed above the name banner",
+    "unclear": ""
+  },
+  {
+    "file": "WildTort.PNG",
+    "name": "Wild Tortoise",
+    "colour": "purple",
+    "value": 2,
+    "effects": [
+      {
+        "timing": "Ongoing Effect",
+        "text": "WILD CARDS ARE EVERY COLOR."
+      }
+    ],
+    "copies": null,
+    "set_code": "Alpha4",
+    "other_printed": "date code 20250111TJF (bottom-left); artist signature bottom-right (stylised scribble, not legible as a name); colour word 'PURPLE' printed above the name banner",
+    "unclear": ""
+  }
+]
