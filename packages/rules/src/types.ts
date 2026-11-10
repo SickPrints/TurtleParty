@@ -52,6 +52,12 @@ export interface RuleOptions {
   switchTopTriggersPairing: boolean;
   /** Tie-breaker for the final score. "shared" = everyone tied for most points wins. */
   tieBreaker: "shared" | "mostPairs" | "fewestPairs";
+  /**
+   * Rule 9: what happens when the last card is drawn from the Central Deck.
+   * "immediately" = the game is over on the spot (Tommy's call, 2026-11-09).
+   * "lastTurns" = every player gets one last turn, starting with the next player.
+   */
+  endGame: "immediately" | "lastTurns";
 }
 
 /** Room settings players choose in the lobby (playtest both ways). */

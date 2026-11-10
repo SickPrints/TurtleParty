@@ -30,6 +30,7 @@ export const DEFAULT_OPTIONS: RuleOptions = {
   ongoingOnlyWhileTop: true,
   switchTopTriggersPairing: false,
   tieBreaker: "shared",
+  endGame: "immediately",
 };
 
 export const DEFAULT_SETTINGS: RoomSettings = {
@@ -96,6 +97,8 @@ export function createGame(config: GameConfig): GameState {
     for (let k = 1; k <= n; k++) s.players[(s.dealer + k) % n].hand.push(s.deck.shift()!);
   }
   if (s.deck.length === 0) {
+    // The deal itself used every card, so nobody "drew the last card": in either
+    // endGame mode, everyone gets one turn. Only happens with a tiny test deck.
     s.finalTurnsLeft = n;
     s.currentTurnIsFinal = true;
   }
@@ -305,10 +308,11 @@ function pushEffect(
  * Discard Anytime card, not yet passed) has to answer.
  */
 function settle(s: GameState, events: GameEvent[]): void {
-  while (s.stack.length > 0 && awaitingResponse(s).length === 0) {
+  while (s.status === "playing" && s.stack.length > 0 && awaitingResponse(s).length === 0) {
     const item = s.stack.pop()!;
     s.passed = [];
     resolve(s, item, events);
+    if (s.status !== "playing") return; // the last card was drawn mid-effect
     checkSplits(s, events);
   }
 }
@@ -327,6 +331,7 @@ function resolve(s: GameState, item: StackItem, events: GameEvent[]): void {
         break;
       case "draw":
         drawCards(s, item.controller, a.n, events);
+        if (s.status !== "playing") return; // game over: the rest of the effect never happens
         break;
       case "addCounters":
         if (target) {
@@ -380,18 +385,23 @@ function drawCards(s: GameState, seat: number, n: number, events: GameEvent[]): 
     p.hand.push(s.deck.shift()!);
     drawn++;
     if (s.deck.length === 0 && s.finalTurnsLeft === null) {
-      // Rule 9: last card drawn - every player gets one last turn, starting with the next player.
-      s.finalTurnsLeft = s.players.length;
       events.push({ type: "lastCardDrawn", player: p.id });
+      // Rule 9, "lastTurns": every player gets one last turn, starting with the next player.
+      if (s.options.endGame === "lastTurns") s.finalTurnsLeft = s.players.length;
     }
   }
   if (drawn > 0) events.push({ type: "drew", player: p.id, count: drawn });
+  // Rule 9, "immediately": drawing the last card ends the game on the spot.
+  if (s.options.endGame === "immediately" && drawn > 0 && s.deck.length === 0 && s.finalTurnsLeft === null) {
+    finish(s, events);
+  }
 }
 
 /** Rule 8: draw back up to handsize, then play passes clockwise. */
 function endTurn(s: GameState, events: GameEvent[]): void {
   const p = s.players[s.current];
   drawCards(s, s.current, Math.max(0, s.options.handSize - p.hand.length), events);
+  if (s.status !== "playing") return; // drawing up took the last card
   events.push({ type: "turnEnded", player: p.id });
 
   if (s.currentTurnIsFinal) s.finalTurnsLeft!--;
@@ -409,6 +419,7 @@ function endTurn(s: GameState, events: GameEvent[]): void {
 
 /** Rule 9: highest total party points wins. */
 function finish(s: GameState, events: GameEvent[]): void {
+  checkSplits(s, events); // Rule 7 still applies to a pair knocked to 0 just before the end
   const totals = scores(s);
   const best = Math.max(...s.players.map((p) => totals[p.id]));
   let leaders = s.players.filter((p) => totals[p.id] === best);

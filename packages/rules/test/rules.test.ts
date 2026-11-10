@@ -3,6 +3,7 @@
 import { describe, expect, it } from "vitest";
 import { applyAction, awaitingResponse, bundleSizes, createGame, pairValue, placeholderDeck, rollD6, viewFor } from "../src";
 import { act, card, fillers, fx, givePair, pair, refused, run, table } from "./helpers";
+import type { CardEffect } from "../src";
 
 describe("Rule 1: setup", () => {
   it("deals 5 cards to each of 4 players and the dealer starts", () => {
@@ -107,7 +108,7 @@ describe("Rule 4: colour pairs fire the top card's effects", () => {
   });
 
   it("switching the top card is free, once per turn per pair, and moves the Ongoing bonus", () => {
-    let s = table([[], []]);
+    let s = table([[], []], { deck: fillers(20) }); // both players draw 5, so 10 cards would end the game
     givePair(s, 0, "P", card("st", "red", 2, fx.steady), card("r1", "red", 1));
     expect(pairValue(s, s.players[0].pairs[0])).toBe(4); // 2 + 1 + Ongoing 1
     s = act(s, "p1", { type: "switchTop", pairId: "P" });
@@ -206,30 +207,63 @@ describe("Rule 8: end of turn", () => {
 });
 
 describe("Rule 9: end of game", () => {
-  it("after the last card is drawn every player gets one last turn, starting with the next player", () => {
+  it("drawing the last card ends the game immediately (the default)", () => {
     let s = table([[card("r1", "red", 1), card("r2", "red", 2)], [card("g3", "green", 3), card("g2", "green", 2)], []], {
       deck: fillers(1),
     });
     s = act(s, "p1", pair("r1", "r2"));
     s = act(s, "p1", { type: "endTurn" }); // draws the last card
-    expect(s.finalTurnsLeft).toBe(3);
-    s = act(s, "p2", pair("g3", "g2"));
-    s = act(s, "p2", { type: "endTurn" });
-    s = act(s, "p3", { type: "endTurn" });
-    expect(s.status).toBe("playing");
-    s = act(s, "p1", { type: "endTurn" }); // p1's last turn
     expect(s.status).toBe("finished");
-    expect(s.winners).toEqual(["p2"]); // 5 points beats 3
+    expect(s.winners).toEqual(["p1"]); // p2 never got to pair: 3 points beats 0
   });
 
-  it("if an effect draws the last card mid-turn, that player still gets a last turn later", () => {
-    let s = table([[card("dr", "red", 1, fx.draw1)], [], []], { deck: fillers(1) });
-    s = act(s, "p1", { type: "pitch", card: "dr" });
-    expect(s.finalTurnsLeft).toBe(3);
-    for (const p of ["p1", "p2", "p3"]) s = act(s, p, { type: "endTurn" });
-    expect(s.status).toBe("playing");
-    s = act(s, "p1", { type: "endTurn" });
+  it("if an effect draws the last card mid-turn, the game ends there and the rest of the effect never happens", () => {
+    const drawThenPlay = { timing: "pitch", actions: [{ kind: "draw", n: 1 }, { kind: "playPlus", n: 1 }], text: "draw 1, Play +1" } as CardEffect;
+    let s = table([[card("dp", "red", 1, drawThenPlay)], [], []], { deck: fillers(1) });
+    s = act(s, "p1", { type: "pitch", card: "dp" });
     expect(s.status).toBe("finished");
+    expect(s.playsRemaining).toBe(0); // the Play +1 after the draw didn't happen
+    expect(s.players[0].hand).toHaveLength(1);
+  });
+
+  it("a pair knocked to 0 just before the end still splits before scoring", () => {
+    const s = table([[], []], { deck: fillers(1) });
+    givePair(s, 0, "A", card("r1", "red", 1), card("r1b", "red", 1));
+    s.players[0].pairs[0].counters = -2; // worth 0
+    const t = act(s, "p1", { type: "endTurn" });
+    expect(t.status).toBe("finished");
+    expect(t.players[0].pairs).toEqual([]);
+  });
+
+  describe('with endGame: "lastTurns"', () => {
+    const lastTurns = { endGame: "lastTurns" } as const;
+
+    it("after the last card is drawn every player gets one last turn, starting with the next player", () => {
+      let s = table([[card("r1", "red", 1), card("r2", "red", 2)], [card("g3", "green", 3), card("g2", "green", 2)], []], {
+        deck: fillers(1),
+        options: lastTurns,
+      });
+      s = act(s, "p1", pair("r1", "r2"));
+      s = act(s, "p1", { type: "endTurn" }); // draws the last card
+      expect(s.finalTurnsLeft).toBe(3);
+      s = act(s, "p2", pair("g3", "g2"));
+      s = act(s, "p2", { type: "endTurn" });
+      s = act(s, "p3", { type: "endTurn" });
+      expect(s.status).toBe("playing");
+      s = act(s, "p1", { type: "endTurn" }); // p1's last turn
+      expect(s.status).toBe("finished");
+      expect(s.winners).toEqual(["p2"]); // 5 points beats 3
+    });
+
+    it("if an effect draws the last card mid-turn, that player still gets a last turn later", () => {
+      let s = table([[card("dr", "red", 1, fx.draw1)], [], []], { deck: fillers(1), options: lastTurns });
+      s = act(s, "p1", { type: "pitch", card: "dr" });
+      expect(s.finalTurnsLeft).toBe(3);
+      for (const p of ["p1", "p2", "p3"]) s = act(s, p, { type: "endTurn" });
+      expect(s.status).toBe("playing");
+      s = act(s, "p1", { type: "endTurn" });
+      expect(s.status).toBe("finished");
+    });
   });
 
   it("a tie is shared by default; the tie-breaker option can split it", () => {
@@ -238,9 +272,7 @@ describe("Rule 9: end of game", () => {
       givePair(s, 0, "A", card("r3", "red", 3), card("r1", "red", 1)); // 4 points, 1 pair
       givePair(s, 1, "B", card("g1", "green", 1), card("g1b", "green", 1)); // 2 + 2 = 4 points, 2 pairs
       givePair(s, 1, "C", card("o1", "orange", 1), card("o1b", "orange", 1));
-      let t = act(s, "p1", { type: "endTurn" }); // last card drawn
-      for (const p of ["p2", "p1"]) t = act(t, p, { type: "endTurn" });
-      return t;
+      return act(s, "p1", { type: "endTurn" }); // last card drawn: game over
     };
     expect(setup("shared").winners).toEqual(["p1", "p2"]);
     expect(setup("mostPairs").winners).toEqual(["p2"]);

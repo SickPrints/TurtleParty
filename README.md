@@ -49,6 +49,7 @@ Each question is a switch in `RuleOptions` (`src/types.ts`) or a single spot in 
 | Tie-breaker | Tied players share the win (`mostPairs` / `fewestPairs` also available) | `tieBreaker` |
 | Do counters vanish when a pair splits? | Yes | `checkSplits` |
 | Is an Ongoing Effect active only while its card is on top? | Yes, and only in a colour pair | `ongoingOnlyWhileTop` |
+| What happens when the last card is drawn? | **Decided 2026-11-09:** the game ends immediately, as on the Alpha 4 instruction card. `lastTurns` keeps the old one-last-turn-each version for playtests | `endGame` |
 
 New questions that came up while building:
 
