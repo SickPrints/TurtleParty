@@ -19,8 +19,8 @@ Run each file once, in order, in **SQL Editor > New query**: paste the whole fil
 ## One-time dashboard settings
 
 1. **Authentication > URL Configuration**
-   - Site URL: `http://localhost:3100` (change it to the real address at launch)
-   - Redirect URLs: add `http://localhost:3100/**`
+   - Site URL: `https://turtleparty.vercel.app` (the live site; it was `http://localhost:3100` before 2026-11-12)
+   - Redirect URLs: add `https://turtleparty.vercel.app/**` and keep `http://localhost:3100/**` for local work (both set by Tommy 2026-11-12)
 2. **Authentication > Sign In / Providers > Allow anonymous sign-ins**: turn it **on**. This is the main way in: "Start playing" gives each browser a guest identity with no email. Supabase limits new guests per hour from one internet address (about 30 by default), which is plenty for now. Before a public launch, add a bot check (Supabase supports Cloudflare Turnstile) so nobody can mass-create guests.
 3. **Authentication > Sign In / Providers > Email**: leave it on. Email is optional, for keeping the same player on another device, and uses a one-time link, so there are no passwords.
    - Supabase's built-in email sender allows 2 emails per hour and only delivers to members of the project's organization. Set up a custom SMTP sender (for example Resend, with DNS records added in Squarespace for turtleparty.org) before other players need email.
